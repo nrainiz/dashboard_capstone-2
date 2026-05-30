@@ -149,34 +149,35 @@ if halaman == "📋 Overview & Data Dictionary":
     # sumber data yang digunakan
     with st.expander("📁 Sumber Dataset"):
         st.markdown("""
-        | No | Nama Dataset | Link | Lisensi | 
-        |---|---|---|---|
-        | 1 | Rice Leaf Disease Dataset | [Kaggle](https://www.kaggle.com/datasets/soni535/rice-leaf-bacterial-and-fungal-disease) | Unknown |
-        | 2 | Rice Leaf Diseases Dataset | [Kaggle](https://www.kaggle.com/datasets/raihan150146/rice-leaf-diseases-dataset) | [CC0: Public Domain](https://creativecommons.org/publicdomain/zero/1.0/)
-        | 3 | Zambali Rice Dataset (Public V1) | [Kaggle](https://www.kaggle.com/datasets/gettingintoml/zambali-rice-dataset-v3-1) | [Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0)
-        | 4 | Rice Disease Dataset | [Kaggle](https://www.kaggle.com/datasets/anshulm257/rice-disease-dataset) | Unknown |
-        | 5 | Rice Leaf Disease Detection Dataset | [Kaggle](https://www.kaggle.com/datasets/sham69/rice-leaf-disease-detection-dataset) | [MIT](https://www.mit.edu/~amini/LICENSE.md)
-        | 6 | DatasetOfLeafDiseasesAndPestsOfAgriculturalPlants | [Kaggle](https://www.kaggle.com/datasets/dellcat/datasetofleafdiseasesandpestsofagriculturalplants) | [Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/)
-        | 7 | image captioning dataset, random images | [Kaggle](https://www.kaggle.com/datasets/shamsaddin97/image-captioning-dataset-random-images) | Unknown | 
-        | 8 | FIRE Dataset | [Kaggle](https://www.kaggle.com/datasets/phylake1337/fire-dataset) | [CC0: Public Domain](https://creativecommons.org/publicdomain/zero/1.0/) | 
-        | 9 | Vehicle dataset - Images & Segmentation | [Kaggle](https://www.kaggle.com/datasets/trainingdatapro/car-masks) | [Attribution-NonCommercial-NoDerivatives 4.0 International](https://creativecommons.org/licenses/by-nc-nd/4.0/)
-        | 10 | PlantVillage Dataset | [Kaggle](https://www.kaggle.com/datasets/emmarex/plantdisease) | Unknown |           
+        | No | Nama Dataset | Link |
+        |---|---|---|
+        | 1 | Rice Leaf Disease Dataset | [Kaggle](https://www.kaggle.com/datasets/soni535/rice-leaf-bacterial-and-fungal-disease) | 
+        | 2 | Rice Leaf Diseases Dataset | [Kaggle](https://www.kaggle.com/datasets/raihan150146/rice-leaf-diseases-dataset) |
+        | 3 | Zambali Rice Dataset (Public V1) | [Kaggle](https://www.kaggle.com/datasets/gettingintoml/zambali-rice-dataset-v3-1) | 
+        | 4 | Rice Disease Dataset | [Kaggle](https://www.kaggle.com/datasets/anshulm257/rice-disease-dataset) | 
+        | 5 | Rice Leaf Disease Detection Dataset | [Kaggle](https://www.kaggle.com/datasets/sham69/rice-leaf-disease-detection-dataset) | 
+        | 6 | Dataset Of Leaf Diseases And Pests Of Agricultural Plants | [Kaggle](https://www.kaggle.com/datasets/dellcat/datasetofleafdiseasesandpestsofagriculturalplants) | 
+        | 7 | image captioning dataset, random images | [Kaggle](https://www.kaggle.com/datasets/shamsaddin97/image-captioning-dataset-random-images) |
+        | 8 | FIRE Dataset | [Kaggle](https://www.kaggle.com/datasets/phylake1337/fire-dataset) | 
+        | 9 | Vehicle dataset - Images & Segmentation | [Kaggle](https://www.kaggle.com/datasets/trainingdatapro/car-masks) | 
+        | 10 | PlantVillage Dataset | [Kaggle](https://www.kaggle.com/datasets/emmarex/plantdisease) |      
                     """)
 
     st.divider()
     st.subheader("📖 Data Dictionary")
     dict_data = {
-        "Atribut": ["format", "label", "split", "width", "height", "color_mode"],
-        "Tipe Data": ["String", "String", "String", "Integer", "Integer", "String"],
+        "Atribut": ["image", "label", "split", "width", "height", "color_mode", "format"],
+        "Tipe Data": ["Array", "String", "String", "Integer", "Integer", "String", "String"],
         "Deskripsi": [
-            "Foto daun padi yang digunakan sebagai input model",
-            "Kelas penyakit: Blast, Brown Spot, Tungro, atau Healthy",
-            "Pembagian data: Train atau Test",
-            "Lebar gambar dalam piksel (setelah resize)",
-            "Tinggi gambar dalam piksel (setelah resize)",
-            "Mode warna gambar (RGB)"
+            "Data piksel gambar daun padi yang menjadi input utama model",
+            "Kelas kondisi daun padi yang menjadi target prediksi model",
+            "Pembagian dataset untuk keperluan pelatihan dan evaluasi model",
+            "Lebar dimensi gambar setelah standarisasi",
+            "Tinggi dimensi gambar setelah standarisasi",
+            "Mode warna gambar setelah proses konversi",
+            "Format file gambar setelah proses konversi"
         ],
-        "Spesifikasi": ["JPG", "Blast | Brown Spot | Tungro | Healthy | Unknown", "Train | Test", "224", "224", "RGB"]
+        "Spesifikasi": ["Nilai piksel (0-225), 3 channel RGB", "Blast, Brown Spot, Tungro, Healthy, Unknown", "Train, Test", "224 piksel", "224 piksel", "RGB 3 channel", "JPEG"]
     }
     st.dataframe(pd.DataFrame(dict_data), use_container_width=True)
 
