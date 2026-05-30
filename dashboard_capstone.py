@@ -151,16 +151,16 @@ if halaman == "📋 Overview & Data Dictionary":
         st.markdown("""
         | No | Nama Dataset | Link |
         |---|---|---|
-        | 1 | Rice Leaf Disease Dataset | [Kaggle](https://www.kaggle.com/datasets/soni535/rice-leaf-bacterial-and-fungal-disease) | 
-        | 2 | Rice Leaf Diseases Dataset | [Kaggle](https://www.kaggle.com/datasets/raihan150146/rice-leaf-diseases-dataset) |
-        | 3 | Zambali Rice Dataset (Public V1) | [Kaggle](https://www.kaggle.com/datasets/gettingintoml/zambali-rice-dataset-v3-1) | 
-        | 4 | Rice Disease Dataset | [Kaggle](https://www.kaggle.com/datasets/anshulm257/rice-disease-dataset) | 
+        | 1 | Rice Disease Dataset | [Kaggle](https://www.kaggle.com/datasets/anshulm257/rice-disease-dataset) | 
+        | 2 | Rice Leaf Disease Dataset | [Kaggle](https://www.kaggle.com/datasets/soni535/rice-leaf-bacterial-and-fungal-disease) | 
+        | 3 | Rice Leaf Diseases Dataset | [Kaggle](https://www.kaggle.com/datasets/raihan150146/rice-leaf-diseases-dataset) |
+        | 4 | Zambali Rice Dataset (Public V1) | [Kaggle](https://www.kaggle.com/datasets/gettingintoml/zambali-rice-dataset-v3-1) | 
         | 5 | Rice Leaf Disease Detection Dataset | [Kaggle](https://www.kaggle.com/datasets/sham69/rice-leaf-disease-detection-dataset) | 
         | 6 | Dataset Of Leaf Diseases And Pests Of Agricultural Plants | [Kaggle](https://www.kaggle.com/datasets/dellcat/datasetofleafdiseasesandpestsofagriculturalplants) | 
-        | 7 | image captioning dataset, random images | [Kaggle](https://www.kaggle.com/datasets/shamsaddin97/image-captioning-dataset-random-images) |
-        | 8 | FIRE Dataset | [Kaggle](https://www.kaggle.com/datasets/phylake1337/fire-dataset) | 
-        | 9 | Vehicle dataset - Images & Segmentation | [Kaggle](https://www.kaggle.com/datasets/trainingdatapro/car-masks) | 
-        | 10 | PlantVillage Dataset | [Kaggle](https://www.kaggle.com/datasets/emmarex/plantdisease) |      
+        | 7 | FIRE Dataset | [Kaggle](https://www.kaggle.com/datasets/phylake1337/fire-dataset) | 
+        | 8 | PlantVillage Dataset | [Kaggle](https://www.kaggle.com/datasets/emmarex/plantdisease) |  
+        | 9 | image captioning dataset, random images | [Kaggle](https://www.kaggle.com/datasets/shamsaddin97/image-captioning-dataset-random-images) |
+        | 10 | Vehicle dataset - Images & Segmentation | [Kaggle](https://www.kaggle.com/datasets/trainingdatapro/car-masks) | 
                     """)
 
     st.divider()
